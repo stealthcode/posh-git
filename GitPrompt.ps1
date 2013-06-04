@@ -4,15 +4,15 @@
 $global:GitPromptSettings = New-Object PSObject -Property @{
     DefaultForegroundColor    = $Host.UI.RawUI.ForegroundColor
 
-    BeforeText                = ' ['
-    BeforeForegroundColor     = [ConsoleColor]::Yellow
+    BeforeText                = ' '+[convert]::ToChar(171)
+    BeforeForegroundColor     = [ConsoleColor]::DarkCyan
     BeforeBackgroundColor     = $Host.UI.RawUI.BackgroundColor
-    DelimText                 = ' |'
-    DelimForegroundColor      = [ConsoleColor]::Yellow
+    DelimText                 = ' '+[convert]::ToChar(155)
+    DelimForegroundColor      = [ConsoleColor]::DarkCyan
     DelimBackgroundColor      = $Host.UI.RawUI.BackgroundColor
 
-    AfterText                 = ']'
-    AfterForegroundColor      = [ConsoleColor]::Yellow
+    AfterText                 = [convert]::ToChar(187)
+    AfterForegroundColor      = [ConsoleColor]::DarkCyan
     AfterBackgroundColor      = $Host.UI.RawUI.BackgroundColor
 
     BranchForegroundColor       = [ConsoleColor]::Cyan
@@ -46,7 +46,7 @@ $global:GitPromptSettings = New-Object PSObject -Property @{
     EnableFileStatus          = $true
     RepositoriesInWhichToDisableFileStatus = @( ) # Array of repository paths
 
-    EnableWindowTitle         = 'posh~git ~ '
+    EnableWindowTitle         = 'PS|'
 
     Debug                     = $false
 }

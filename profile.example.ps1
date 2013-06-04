@@ -20,7 +20,7 @@ function global:prompt {
     Write-VcsStatus
 
     $global:LASTEXITCODE = $realLASTEXITCODE
-    return "> "
+    return " "
 }
 
 Enable-GitColors
